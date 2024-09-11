@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elemancil.Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Link to Google Fonts for Roboto Mono font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <!-- FAVICON -->
+    <link rel="icon" href="professional-portfolio.png" type="image/x-icon">
+
+
+
+    <style>
+
+        /* Navbar toggler icon */
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(22, 255, 0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+        }
+
+        /* The body fonts */
+        body {
+            font-family: 'Roboto Mono', monospace;
+            background-color: #000000;
+        }
+
+        /* Adjust the size of my Profile picture */
+        .custom-profile-pic {
+            width: 200px; /* Adjust the width as needed */
+            height: 200px; /* Adjust the height as needed */
+            border: 7px solid #16FF00;
+        }
+
+        .social-icons {
+            text-align: center; /* Center the icons */
+            margin-top: 20px; /* Add some spacing from the top */
+            margin: 0 15px;
+            transition: color 0.3s; /* Smooth color transition on hover */
+        }
+        .social-icons a {
+            color: #16FF00; /* Icon color */
+            font-size: 24px; /* Icon size */
+            transition: color 0.3s; /* Smooth color transition on hover */
+        }
+        .social-icons a:hover {
+            color: #FF0000; /* Icon color on hover */
+        }
+
+        .personal-details {
+            background-color: #0F6292; /* Light background color */
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .personal-details h4 {
+            color: #16FF00; /* Customize header color */
+        }
+        .personal-details p {
+            font-size: 18px;
+            color: #FFED00; /* Customize text color */
+        }
+
+        .education-achievements {
+            background-color: #0F6292; /* Light gray background */
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .education-achievements h4 {
+            color: #16FF00; /* Customize header color */
+        }
+        .education-achievements ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .education-achievements li {
+            font-size: 16px;
+            color: #FFED00; /* Customize text color */
+            margin-bottom: 10px;
+        }
+
+        .title-section {
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center; /* Center the text */
+        }
+        .title-section h1 {
+            color: #16FF00; /* Customize the title color */
+            font-size: 2.5rem; /* Adjust font size as needed */
+            font-weight: 900;
+        }
+
+        @keyframes smoothMove {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px); /* Adjust the distance as needed */
+            }
+        }
+
+        .bouncing {
+            animation: smoothMove 3s ease-in-out infinite;
+        }
+
+        .custom-profile-pic {
+            width: 200px; /* Adjust size as needed */
+            height: 200px; /* Ensure it's a circle */
+            object-fit: cover;
+        }
+
+        @keyframes fadeInEaseIn {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+        } 
+            to {
+                opacity: 1;
+                transform: translateY(1);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInEaseIn 2s ease-in;
+        }   
+
+        @media (max-width: 576px) {
+            .social-icons {
+                margin-top: 10px; /* Adjust top margin for small screens */
+                margin: 0 30px;
+            }
+            .social-icons a {
+                font-size: 20px; /* Adjust icon size for smaller screens */
+                margin: 0 10px; /* Adjust space between icons for smaller screens */
+            }
+        }
+
+        /* Style for centering nav-links in collapsed mode */
+        @media (max-width: 991px) { /* Adjust this width if needed */
+            .navbar-nav {
+                text-align: center; /* Center the links */
+                width: 100%; /* Make sure the ul takes up the full width */
+            }
+    
+            .nav-item {
+                display: block; /* Make sure each nav-item takes full width */
+            }
+        }
+
+    </style>
+</head>
+<body>
+    
+<!--Start of my Navbar-->
+<nav class="navbar navbar-expand-lg fixed-top" style="background-color: #000000;">
+    <div class="container-fluid">
+        <!-- Brand Logo and Image on the left -->
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <span style="color: #16FF00; font-weight: 900; font-size: 30px;">AboutMe.UI</span>
+            <!-- Add your image beside the title -->
+            <img src="KLD-logo.png" alt="Brand Image" style="width: 40px; height: 40px; margin-left: 10px;">
+        </a>
+
+        <!-- Navbar Toggler for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Centered Nav Links and Social Icons in collapsible section -->
+        <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" style="color: #16FF00; font-weight: 900;" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" style="color: #16FF00; font-weight: 900;" aria-current="page" href="aboutme.html">About Me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" style="color: #16FF00; font-weight: 900;" aria-current="page" href="Projects.html">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" style="color: #16FF00; font-weight: 900;" aria-current="page" href="ContactMe.html">Contact Me</a>
+                </li>
+            </ul>
+
+            <!-- Social Icons inside the navbar collapse for small screens -->
+            <div class="social-icons d-lg-none d-flex justify-content-center mt-3" style="border-radius: 50px;">
+                <a href="https://www.facebook.com/johnmar.elemancil.92" target="_blank" title="Facebook" class="mx-2">
+                    <i class="fab fa-facebook-f" style="color: #ffffff;"></i>
+                </a>
+                <a href="https://www.instagram.com/jomzzyy/" target="_blank" title="Instagram" class="mx-2">
+                    <i class="fab fa-instagram" style="color: #ffffff;"></i>
+                </a>
+                <a href="https://github.com/johnmar07" target="_blank" title="GitHub" class="mx-2">
+                    <i class="fab fa-github" style="color: #ffffff;"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/john-mar-ensik-elemancil-575b67326/" target="_blank" title="LinkedIn" class="mx-2">
+                    <i class="fab fa-linkedin-in" style="color: #ffffff;"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Social Icons on the right for larger screens -->
+        <div class="social-icons d-none d-lg-flex ms-auto" style="border-radius: 50px;">
+            <a href="https://www.facebook.com/johnmar.elemancil.92" target="_blank" title="Facebook" class="mx-2">
+                <i class="fab fa-facebook-f" style="color: #ffffff;"></i>
+            </a>
+            <a href="https://www.instagram.com/jomzzyy/" target="_blank" title="Instagram" class="mx-2">
+                <i class="fab fa-instagram" style="color: #ffffff;"></i>
+            </a>
+            <a href="https://github.com/johnmar07" target="_blank" title="GitHub" class="mx-2">
+                <i class="fab fa-github" style="color: #ffffff;"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/john-mar-ensik-elemancil-575b67326/" target="_blank" title="LinkedIn" class="mx-2">
+                <i class="fab fa-linkedin-in" style="color: #ffffff;"></i>
+            </a>
+        </div>
+    </div>
+</nav>
+<!--End of my Navbar-->
+
+
+<br><br><br>
+
+    <!--Start of my Profile Picture-->
+    <div class="container">
+    </br></br>
+    <div class="row">
+        <div class="col">
+            <div class="card text-center" style="background-color: transparent; border: none;">
+                <div class="card-body">
+                    <img src="Johnmar (3).jpg" class="img-fluid rounded-circle custom-profile-pic bouncing" alt="Profile Picture">
+                    <h5 class="card-title mt-3" style="color: #0F6292; font-weight: 900;">John Mar E. Elemancil</h5>
+                    <p class="card-text" style="color: #16FF00;">BS in Information System</p>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <br><br>
+
+        <div class="col">
+            <h3 class="fade-in" style="color: #FFED00; text-align: justify; margin-left: 50px; margin-right: 50px; word-spacing: -10px;">
+                I'm John mar, a BS in Information System College Student working on designing, Coding, 
+                Web development, implementation, management, and analysis of information systems used 
+                within organizations.
+            </h3>
+        </div>   
+        
+        <br><br>
+
+        <div class="col">
+            <h3 class="fade-in" style="color: #FFED00; text-align: justify; margin-left: 50px; margin-right: 50px; word-spacing: -10px;">
+                I have experience working across different areas of digital design; front-end development, 
+                web UI/UX design, app UI/UX design, to my current role in BSIS course.
+            </h3>
+        </div>
+    </div>
+</div>
+<!--End of my Profile Picture-->
+
+<!--Start of my Personal Details-->
+<div class="container my-5">
+    <div class="row">
+        <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+            <div class="personal-details">
+                <h4>Personal Details</h4>
+                <p><strong>Name:</strong> John Mar E. Elemancil</p>
+                <p><strong>Birthdate:</strong> April 07, 2003</p>
+                <p><strong>Chinese Zodiac:</strong> The Bull - Gong Niou</p>
+                <p><strong>Zodiac Sign:</strong> Taurus ♉︎</p>
+                <p><strong>Birthplace:</strong> Zamboanga Del Sur</p>
+                <p><strong>Age:</strong> 21</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--End of my Personal Details-->
+
+<!-- Start of my Education and Achievement -->
+<div class="container my-5">
+    <div class="row">
+        <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+            <div class="education-achievements">
+                <h4>Education</h4>
+                <ul>
+                    <li><strong>Year:</strong> 2023-2027</li>
+                    <li><strong>Degree:</strong> Bachelor of Science in Information Systems</li>
+                    <li><strong>Institution:</strong> Kolehiyo ng Lungsod ng Dasmariñas (KLD)</li>
+                    <li><strong>Address:</strong> Barangay Burol Main, Dasmariñas, Philippines</li>
+                </ul>
+                
+                <h4>Achievements</h4>
+                <ul>
+                    <li><strong>Achievement 1:</strong> [Detail of Achievement]</li>
+                    <li><strong>Achievement 2:</strong> [Detail of Achievement]</li>
+                    <li><strong>Achievement 3:</strong> [Detail of Achievement]</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container my-5">
+    <div class="row">
+        <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+            <div class="education-achievements">
+                <h4>Education</h4>
+                <ul>
+                    <li><strong>Year:</strong> 2021-2023</li>
+                    <li><strong>Degree:</strong> Information and Communication Technology (ICT)</li>
+                    <li><strong>Institution:</strong> Saint Jude College of Dasmariñas Cavite (SJCDC)</li>
+                    <li><strong>Address:</strong> Carlos Trinidad Avenue, Salitran IV, Dasmariñas, Philippines</li>
+                </ul>
+                
+                <h4>Achievements</h4>
+                <ul>
+                    <li><strong>Achievement 1:</strong> With Honors</li>
+                    <li><strong>Achievement 2:</strong> With Honors</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Start of my Education and Achievement -->
+
+
+
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-12">
+                <div class="title-section">
+                    <h1>Hobbies</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Start of my Hobbies-->
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                <div class="card" style="width: 100%; background-color: #000000;"">
+                    <img src="UIUX.jpg" class="card-img-top" alt="portfolio1.png">
+                    <div class="card-body">
+                        <h5 class="card-title" style="color: #16FF00; font-weight: 900;">UI/UX DESIGN</h5>
+                        <p class="card-text" style="color: #FFED00;">UI/UX design involves creating 
+                            intuitive and engaging digital experiences. Skills include wireframing, 
+                            prototyping, and conducting user research. A strong understanding of visual 
+                            design principles, user behavior, and interaction patterns is crucial. 
+                            Effective communication and problem-solving abilities help translate user 
+                            needs into functional, aesthetically pleasing interfaces.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                <div class="card" style="width: 100%; background-color: #000000;">
+                    <img src="designingskill.jpg" class="card-img-top" alt="portfolio2.png">
+                    <div class="card-body">
+                        <h5 class="card-title" style="color: #16FF00; font-weight: 900;">DESIGNING</h5>
+                        <p class="card-text" style="color: #FFED00;">
+                            Designing skills involve creativity and technical proficiency, utilizing 
+                            tools like Figma, Canva, and Inkscape. Effective designers craft visually 
+                            engaging and user-friendly interfaces by mastering layout, color theory, 
+                            typography, and user-centered design principles to create impactful and 
+                            functional designs.
+                        </p>
+                       
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                <div class="card" style="width: 100%; background-color: #000000;"">
+                    <img src="chess.jpeg" class="card-img-top" alt="infoweb.png">
+                    <div class="card-body">
+                        <h5 class="card-title" style="color: #16FF00; font-weight: 900;">CHESS</h5>
+                        <p class="card-text" style="color: #FFED00;">Chess is my favorite hobbies. Chess 
+                            is a strategic game that enhances my critical thinking and problem-solving 
+                            skills. Each move requires careful planning and foresight, making every game 
+                            a unique challenge. Playing chess sharpens my focus, patience, and tactical 
+                            prowess, providing endless mental stimulation and growth.
+                        </p>                     
+                    </div>
+                </div>
+            </div> 
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                <div class="card" style="width: 100%; background-color: #000000;"">
+                    <img src="basketball.jpg" class="card-img-top" alt="infoweb.png">
+                    <div class="card-body">
+                        <h5 class="card-title" style="color: #16FF00; font-weight: 900;">BASKETBALL</h5>
+                        <p class="card-text" style="color: #FFED00;">Basketball is my dynamic favorite 
+                            sport that combines athleticism, teamwork, and strategy. Mastering dribbling, 
+                            shooting, and defensive skills improves agility and coordination. Playing 
+                            regularly builds endurance and sharpens decision-making, while working with 
+                            teammates enhances communication and strategic play on the court. My favorite 
+                            NBA player is Stephen Curry for shooting and Defensive skills is Lebron James.
+                        </p>
+                    </div>
+                </div>
+            </div>       
+        </div>
+    </div>
+    <!--End of my Hobbies-->
+
+
+    <!--Footer All Rights Reserved-->
+    <footer class="bg-dark text-white text-center py-3">
+        <p class="mb-0">&copy; <span id="year"></span>, John mar Elemancil</p>
+    </footer>
+
+
+
+    <!--Script-->
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+
+    <!--Bootstrap Script-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
